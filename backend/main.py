@@ -2,9 +2,26 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import JSONResponse
 from models import SensorData, SensorReading
 from datetime import datetime, timezone
+from fastapi.middleware.cors import CORSMiddleware
 import random
 
 app = FastAPI(title="Sensor Data API", version="1.0.0")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "http://localhost:5174"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],  # آدرس فرانت‌اند
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # Mock data
 NUM_SENSORS = 3
 # Sensor information
