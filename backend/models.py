@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from typing import List, Optional
 from datetime import datetime
 
+
 # represent a sensor reading
 class SensorReading(BaseModel):
     timestamp: datetime

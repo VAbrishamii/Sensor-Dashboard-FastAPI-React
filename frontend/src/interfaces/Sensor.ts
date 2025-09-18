@@ -6,6 +6,7 @@ export interface SensorReading {
 }
 
 export interface SensorData {
+  value: any;
   id: number;
   name: string;
   location: string;
