@@ -57,7 +57,7 @@ const SensorChart: React.FC<SensorChartProps> = ({ data }) => {
           <Line
             type="monotone"
             dataKey="pressure"
-            stroke="#4CAF515"
+            stroke="#4CAF50"
             dot={false}
           />
         </LineChart>
