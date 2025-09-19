@@ -1,15 +1,14 @@
-@tailwind base;
-@tailwind components;
+
 @tailwind utilities;
 
+
 body {
-  @apply bg-gray-100 text-gray-900;
-}
-h1, h2, h3, h4, h5, h6 {
-  @apply font-bold;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
 }
 .sensor-card {
   display: flex;
+  flex-direction: column;
   width: 50%;
   align-items: center;
   border: 1px solid #ccc;
@@ -17,10 +16,14 @@ h1, h2, h3, h4, h5, h6 {
   margin: 16px;
   padding: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(43, 203, 150, 0.284);
   backdrop-filter: blur(10px);
   transition: transform 0.3s ease, box-shadow 0.3s ease
  
+}
+.sensor-card li{
+  list-style: none;
+  margin: 4px 0;
 }
 
 

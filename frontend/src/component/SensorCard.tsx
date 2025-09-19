@@ -6,19 +6,23 @@ interface SensorCardProps {
 }
 
 const SensorCard: React.FC<SensorCardProps> = ({ sensor }) => {
-  const reading = sensor.readings[0];
-
   return (
-    <div className="sensor-card">
-      <div className="bg-white bg-opacity-20 backdrop-blur-lg rounded-lg shadow-lg p-6 text-white text-center">
-        <h1 className="text-2xl font-bold mb-3">{sensor.name}</h1>
-        <p className="text-lg mb-1">Location: {sensor.location}</p>
-        <p className="text-lg mb-1">Temperature: {reading.temperature} °C</p>
-        <p>Humidity: {reading.humidity} %</p>
-        <p>Pressure: {reading.pressure} bar</p>
-        {/* <p>Timestamp: {new Date(reading.timestamp).toLocaleTimeString()}</p> */}
-        <p>timestamp: {new Date(reading.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>
-      </div>
+    <div
+      className="sensor-card bg-gradient-to-br from-purple-700 via-indigo-700 to-blue-700 
+      rounded-2xl p-6 shadow-lg transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+      <h1 className="text-xl font-bold mb-2">{sensor.name}</h1>
+      <ul className="space-y-1 text-gray-100">
+        <li>
+          <strong>Location:</strong> {sensor.location}
+        </li>
+        {sensor.readings?.length > 0 && (
+          <>
+            <li>🌡️ Temp: {sensor.readings[0].temperature}°C</li>
+            <li>💧 Humidity: {sensor.readings[0].humidity}%</li>
+            <li>⚡ Pressure: {sensor.readings[0].pressure} hPa</li>
+          </>
+        )}
+      </ul>
     </div>
   );
 };

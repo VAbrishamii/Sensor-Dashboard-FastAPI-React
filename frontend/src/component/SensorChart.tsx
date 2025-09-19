@@ -77,7 +77,6 @@ interface SensorChartProps {
 const SensorChart: React.FC<SensorChartProps> = ({ data }) => {
   console.log("SensorChart raw data:", data);
 
-  // ساخت داده تخت برای چارت
   const chartData =
     data.flatMap(
       (sensor) =>
@@ -99,17 +98,27 @@ const SensorChart: React.FC<SensorChartProps> = ({ data }) => {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="timestamp" />
           <YAxis />
-        <Tooltip />
-        <Legend />
-        <Line
-          type="monotone"
-          dataKey="temperature"
-          stroke="#FF5722"
-          dot={false}
-        />
-        <Line type="monotone" dataKey="humidity" stroke="#3F51B5" dot={false} />
-        <Line type="monotone" dataKey="pressure" stroke="#4CAF50" dot={false} />
-      </LineChart>
+          <Tooltip />
+          <Legend />
+          <Line
+            type="monotone"
+            dataKey="temperature"
+            stroke="#FF5722"
+            dot={false}
+          />
+          <Line
+            type="monotone"
+            dataKey="humidity"
+            stroke="#3F51B5"
+            dot={false}
+          />
+          <Line
+            type="monotone"
+            dataKey="pressure"
+            stroke="#4CAF50"
+            dot={false}
+          />
+        </LineChart>
       </ResponsiveContainer>
     </div>
   );
