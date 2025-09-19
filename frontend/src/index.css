@@ -1,14 +1,14 @@
-
+@tailwind base;
+@tailwind components;
 @tailwind utilities;
-
 
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
 }
-.sensor-card {
-  display: flex;
-  flex-direction: column;
+/* .sensor-card {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
   width: 50%;
   align-items: center;
   border: 1px solid #ccc;
@@ -20,8 +20,57 @@ body {
   backdrop-filter: blur(10px);
   transition: transform 0.3s ease, box-shadow 0.3s ease
  
+} */
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  /* background: linear-gradient(135deg, #4f46e5, #9333ea, #ec4899); */
+  padding: 20px;
+  gap: 20px;
 }
-.sensor-card li{
+
+.sidebar {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar a {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(0,0,0,0.3);
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.sidebar a.active {
+  background-color: #072418;
+}
+
+.main-content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.sensor-card {
+  background: rgba(55, 87, 5, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 400px;
+}
+
+ li{
   list-style: none;
   margin: 4px 0;
 }

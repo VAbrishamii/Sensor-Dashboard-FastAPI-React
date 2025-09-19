@@ -19,11 +19,12 @@ const SensorTable: React.FC = () => {
   }, []);
 
   return (
-    <div className="sensor-table min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 
-        p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {sensors.map(sensor => (
-        <SensorCard key={sensor.id} sensor={sensor} />
-      ))}
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 p-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {sensors.map((sensor) => (
+          <SensorCard key={sensor.id} sensor={sensor} />
+        ))}
+      </div>
     </div>
   );
 };

@@ -14,65 +14,7 @@ import {
 interface SensorChartProps {
   data: SensorData[];
 }
-// const SensorChart: React.FC<SensorChartProps> = ({ data }) => {
-//   const chartData =
-//   data?.flatMap(sensor =>
-//     Array.isArray(sensor.readings)
-//       ? sensor.readings.map(r => ({
-//           name: sensor.name,
-//           timestamp: new Date(r.timestamp).toLocaleTimeString(),
-//           temperature: r.temperature,
-//           humidity: r.humidity,
-//           pressure: r.pressure,
-//         }))
-//       : []
-//   ) ?? [];
 
-//   console.log("SensorChart data:", data);
-//   console.log("ChartData:", chartData);
-
-//   if (chartData.length === 0) {
-//     return (
-//       <div className="p-6 text-center text-gray-400">
-//         No data available for chart.
-//       </div>
-//     );
-//   }
-
-//   return (
-//     <div className="w-full h-[500px] bg-white p-4 rounded shadow-lg">
-//       <ResponsiveContainer width="100%" height="100%">
-//         <LineChart data={chartData}>
-//           <CartesianGrid strokeDasharray="3 3" />
-//           <XAxis dataKey="timestamp" />
-//           <YAxis />
-//           <Tooltip />
-//           <Legend />
-//           <Line
-//             type="monotone"
-//             dataKey="temperature"
-//             stroke="#FF5722"
-//             dot={false}
-//           />
-//           <Line
-//             type="monotone"
-//             dataKey="humidity"
-//             stroke="#3F51B5"
-//             dot={false}
-//           />
-//           <Line
-//             type="monotone"
-//             dataKey="pressure"
-//             stroke="#4CAF50"
-//             dot={false}
-//           />
-//         </LineChart>
-//       </ResponsiveContainer>
-//     </div>
-//   );
-// };
-
-// export default SensorChart;
 
 const SensorChart: React.FC<SensorChartProps> = ({ data }) => {
   console.log("SensorChart raw data:", data);
@@ -115,7 +57,7 @@ const SensorChart: React.FC<SensorChartProps> = ({ data }) => {
           <Line
             type="monotone"
             dataKey="pressure"
-            stroke="#4CAF50"
+            stroke="#4CAF515"
             dot={false}
           />
         </LineChart>

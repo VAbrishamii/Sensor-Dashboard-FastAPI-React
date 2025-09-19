@@ -1,8 +1,11 @@
 import SensorDashboard from "./pages/dashboard";
-import './App.css'
 
 function App() {
-  return <SensorDashboard />;
+  return (
+    <div>
+      <SensorDashboard />
+    </div>
+  );
 }
 
 export default App;
