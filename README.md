@@ -18,27 +18,3 @@ Data modeling with Pydantic
 Frontend-backend integration
 
 Deployment of frontend (Vercel) and backend (Render or another Python hosting)
-
-🚀 Features
-
-Backend (FastAPI)
-
-/sensors → returns a list of available sensors and their latest reading.
-
-/sensors/{id} → returns details for a specific sensor.
-
-/ → root route with API info and docs link.
-
-Auto-generated Swagger UI at /docs.
-
-CORS enabled for frontend integration.
-
-Frontend (React + Vite)
-
-Fetches data from the FastAPI backend.
-
-Displays sensor cards (name, location, current values).
-
-Interactive charts/tables for readings.
-
-Responsive UI styled with TailwindCSS.
