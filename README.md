@@ -100,13 +100,4 @@ pip install -r requirements.txt
 # Run server
 uvicorn main:app --reload
 
-### Fronend
-```bash
-# Navigate to frontend folder
-cd frontend
 
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
