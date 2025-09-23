@@ -1,79 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
-}
-/* .sensor-card {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  width: 50%;
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin: 16px;
-  padding: 16px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background: rgba(43, 203, 150, 0.284);
-  backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease
- 
-} */
-
-.dashboard-container {
-  display: flex;
-  min-height: 100vh;
-  padding: 20px;
-  gap: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f0f4f8;
+  color: #333;
+  line-height: 1.5; 
 }
 
-.sidebar {
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  border-right: #072418 2px solid;
-}
 
-.sidebar a {
-  padding: 10px;
-  margin: 5px 10px;
-  text-decoration: none;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.3);
-  text-align: center;
-  border-radius: 8px;
-  font-weight: bold;
-}
 
-.sidebar a.active {
-  background-color: #072418;
-}
 
-.main-content {
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.sensor-card {
-  background: rgba(92, 142, 10, 0.8);
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  height: 400px;
-}
-
-li {
-  list-style: none;
-  margin: 4px 0;
-}
