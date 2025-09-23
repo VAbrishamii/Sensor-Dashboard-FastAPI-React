@@ -101,6 +101,7 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 
 ### Fronend
+```bash
 # Navigate to frontend folder
 cd frontend
 
