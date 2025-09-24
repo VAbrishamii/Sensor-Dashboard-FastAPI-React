@@ -15,7 +15,6 @@ interface SensorChartProps {
   data: SensorData[];
 }
 
-
 const SensorChart: React.FC<SensorChartProps> = ({ data }) => {
   console.log("SensorChart raw data:", data);
 
@@ -35,7 +34,7 @@ const SensorChart: React.FC<SensorChartProps> = ({ data }) => {
 
   return (
     <div className="w-full min-h-[400px] bg-white p-4 rounded shadow-lg">
-      <ResponsiveContainer width="100%" aspect={2}>
+      <ResponsiveContainer width="100%" height={400}>
         <LineChart data={chartData}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="timestamp" />

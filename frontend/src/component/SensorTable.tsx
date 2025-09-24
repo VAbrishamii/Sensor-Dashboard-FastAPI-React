@@ -3,7 +3,6 @@ import type { SensorData } from "../interfaces/Sensor";
 import { getSensors } from "../api/sensors";
 import SensorCard from "./SensorCard";
 
-
 const SensorTable: React.FC = () => {
   const [sensors, setSensors] = useState<SensorData[]>([]);
 
@@ -30,4 +29,3 @@ const SensorTable: React.FC = () => {
 };
 
 export default SensorTable;
-

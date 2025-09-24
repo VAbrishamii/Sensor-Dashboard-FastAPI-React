@@ -28,9 +28,9 @@ const SensorDashboard: React.FC = () => {
 
   return (
     <div className="min-h-screen flex justify-center items-center">
-      <div className="flex min-h-[400px] w-[1200px] gap-6 rounded-xl shadow-lg p-6">
+      <div className="flex flex-col md:flex-row min-h-[400px] w-[1200px] gap-6 rounded-xl shadow-lg p-6">
         {/* Sidebar */}
-        <div className="w-64 p-6 flex flex-col gap-6 rounded-xl">
+        <div className="mdw-64 p-6 flex flex-col gap-6 rounded-xl">
           <h1 className="text-2xl font-bold mb-4">Dashboard</h1>
           <a
             className={`cursor-pointer px-4 py-2 rounded-lg transition-colors ${
@@ -61,7 +61,9 @@ const SensorDashboard: React.FC = () => {
               ))}
             </div>
           ) : (
-            <SensorChart data={sensors} />
+            <div className="w-full max-w-full overflow-x-auto">
+              <SensorChart data={sensors} />
+            </div>
           )}
         </div>
       </div>
