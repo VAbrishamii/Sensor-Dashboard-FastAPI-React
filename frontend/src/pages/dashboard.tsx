@@ -51,7 +51,7 @@ const SensorDashboard: React.FC = () => {
         {/* Main Content */}
         <div className="flex-1 flex flex-col gap-6 p-6 overflow-auto">
           {loading ? (
-            <div className="text-center text-white text-lg">
+            <div className="text-center text-gray-700 text-lg">
               Loading sensors...
             </div>
           ) : activeTab === "table" ? (
