@@ -8,7 +8,7 @@ import random
 app = FastAPI(title="Sensor Data API", version="1.0.0")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:5174", "https://sensor-dashboard-fast-api-react.vercel.app"],
+    allow_origins=["http://localhost:5173", "http://localhost:5174", "https://sensor-dashboard-fast-api-react.vercel.app", "https://blue-island-0f8c10910.1.azurestaticapps.net"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
